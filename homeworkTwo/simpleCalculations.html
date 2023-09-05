@@ -108,7 +108,7 @@
             var pizzaCount = 4
             var studentEat = 2.5
             var studentTotal = pizza * pizzaCount / studentEat
-            document.getElementById("studentTotal").innerHTML += pizza * pizzaCount / studentEat
+            document.getElementById("studentTotal").innerHTML += (pizza * pizzaCount / studentEat)
             document.getElementById("profPizza").innerHTML += pizza * pizzaCount - 12 * studentEat
 
         </script>
@@ -135,7 +135,7 @@
             var Child = 6
             var Drinks = 1.5
 
-            document.getElementById("Monty").innerHTML += 2 * Adult + Child + 3 * Drinks + ((2 * Adult + Child + 3 * Drinks) * TAX)
+            document.getElementById("Monty").innerHTML += (2 * Adult + Child + 3 * Drinks + ((2 * Adult + Child + 3 * Drinks) * TAX)).toFixed(2)
         </script>
     </section>
     <section>
@@ -156,7 +156,7 @@
             var weekFour = 178.22
             var weeks = 4
 
-            document.getElementById("tips").innerHTML += (weekOne + weekTwo + weekThree + weekFour) /weeks
+            document.getElementById("tips").innerHTML += ((weekOne + weekTwo + weekThree + weekFour) /weeks).toFixed(2)
         </script>
 
 </body>
