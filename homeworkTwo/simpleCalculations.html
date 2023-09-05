@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Simple Calculations</title>
+    <style>
+        img {
+            border: 2px solid gray;
+            padding: 5px;
+            width: 60%;
+        }
+
+        div {
+            border: 1px solid black;
+            width: 200px;
+            float: left;
+            padding: 5px 10px;
+            margin-right: 1.5em;
+        }
+
+        section {
+            border: 1px solid black;
+            margin-bottom: 1em;
+            padding: 0.25em 1em;
+        }
+
+        .clearfix::before,
+        .clearfix::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Simple Calculations</h1>
+    <p>Read the directions and answer the following problems.</p>
+
+    <section>
+        <h3>Dating</h3>
+        <p>Larry takes two friends to the movie. If tickets cost $14.00, how much will Larry spend on tickets?</p>
+        <p id="ticketNum">Tickets: </p>
+        <p id="ticketCost">Cost: $</p>
+        <p id="ttCost">Total: $
+            <script>
+                var ticketNum = 3
+                var ticketCost = 14
+                const TAX = .07
+                document.getElementById('ticketNum').innerHTML += ticketNum
+                document.getElementById('ticketCost').innerHTML += ticketCost
+                document.getElementById('ttCost').innerHTML += ticketCost * ticketNum + (ticketCost * ticketNum * TAX)
+            </script>
+            <script>
+                var pizza = 4;
+                pizza;
+            </script>
+        </p>
+    </section>
+    <section>
+        <h3>Shopping</h3>
+        <p>You have $235.87 in your bank account. You want to purchase a new outfit: shirt, pants, and shoes. Calculate
+            how much money will be left in your account after your purchase. <br /> NOTE: Create variables for at LEAST
+            the items you wish to purchase.</p>
+        <ul>
+            <li id="jacket">Jacket: $70</li>
+            <li id="sweater">Sweater: $55</li>
+            <li id="shirt">Shirt: $35</li>
+            <li id="pants">Pants: $75</li>
+            <li id="skirt">Skirt: $49</li>
+            <li id="sandals">Sandals: $30</li>
+            <li id="shoes">Shoes: $60</li>
+            <p id="totalCost">Total Cost: $</p>
+            <p id="moneyLeft">Leftover Money: $</p>
+
+        </ul>
+
+        <p id="bank"></p>
+        <p>You decide you want to add a jacket to complete the outfit.Using expressions, display whether you have enough
+            funds to add the jacket. (True or False)</p>
+        <p id="extraCash">I can buy a jacket: </p>
+        <script>
+            var jacket = 70
+            var sweater = 55
+            var shirt = 35
+            var pants = 75
+            var skirt = 49
+            var sandals = 30
+            var shoes = 60
+            var money = 235.87
+            var totalCost = shirt + pants + shoes + ([shirt + pants + shoes] * TAX)
+            var moneyLeft = money - (shirt + pants + shoes + ([shirt + pants + shoes] * TAX))
+            document.getElementById("totalCost").innerHTML += shirt + pants + shoes + ([shirt + pants + shoes] * TAX)
+            document.getElementById("moneyLeft").innerHTML += money - (shirt + pants + shoes + ([shirt + pants + shoes] * TAX))
+            document.getElementById("extraCash").innerHTML += moneyLeft > jacket
+
+        </script>
+    </section>
+    <section>
+        <h3>Pizza</h3>
+        <p>If Professor Rector bought 4 pizzas and she estimated each student would eat 2.5 pieces of pizza and each
+            pizza had 8 slices, how many students could she feed? How many pieces of pizza would be left over for
+            Professor Rector?</p>
+        <p id="studentTotal">How many students: </p>
+        <p id='profPizza'>Slices Prof. Rector will have: </p>
+        <script>
+            var pizza = 8
+            var pizzaCount = 4
+            var studentEat = 2.5
+            var studentTotal = pizza * pizzaCount / studentEat
+            document.getElementById("studentTotal").innerHTML += pizza * pizzaCount / studentEat
+            document.getElementById("profPizza").innerHTML += pizza * pizzaCount - 12 * studentEat
+
+        </script>
+    </section>
+    <section class="clearfix">
+        <h3>Monty's Mega Bar</h3>
+        <p>Calculate the final price of the meal.</p>
+        <div>
+            <h3>Monty's MegaBar</h3>
+            <p>Adult: $12.00</p>
+            <p>Child: $6</p>
+            <p>Drinks: $1.50</p>
+        </div>
+        <div>
+            <h3>Monty's MegaBar Receipt</h3>
+            <p>2 Adult Buffet<br /> 1 Child Buffet<br /> 3 Drinks</p>
+        </div>
+        <div>
+            <h3>Monty's Answers</h3>
+            <p id="Monty">Total Cost With Tax: $</p>
+        </div>
+        <script>
+            var Adult = 12
+            var Child = 6
+            var Drinks = 1.5
+
+            document.getElementById("Monty").innerHTML += 2 * Adult + Child + 3 * Drinks + ((2 * Adult + Child + 3 * Drinks) * TAX)
+        </script>
+    </section>
+    <section>
+        <h3>Average Earned Tips</h3>
+        <p>You work at a restaurant and want to figure out your average weekly tips. Find your weekly average for the
+            past month.</p>
+        <ul>
+            <li>Week 1: 202.45</li>
+            <li>Week 2: 134.97</li>
+            <li>Week 3: 256.63</li>
+            <li>Week 4: 178.22</li>
+        </ul>
+        <p id="tips">Average Tips Per Week: $</p>
+        <script>
+            var weekOne = 202.45
+            var weekTwo = 134.97
+            var weekThree = 256.63
+            var weekFour = 178.22
+            var weeks = 4
+
+            document.getElementById("tips").innerHTML += (weekOne + weekTwo + weekThree + weekFour) /weeks
+        </script>
+
+</body>
+
+</html>
