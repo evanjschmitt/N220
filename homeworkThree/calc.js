@@ -3,7 +3,7 @@ function calcArea() {
   let num2 = document.getElementById("interestRate").value;
   let num3 = document.getElementById("time").value;
   num2 = num2 / 100;
-  var totalInterest = num1 * (1 + num2) * parseFloat(num3) ;
+  var totalInterest = num1 * (num2/100) * parseFloat(num3).toFixed(2) ;
 
   // document.getElementById("answer").innerHTML = totalInterest;
   document.getElementById("answer").innerHTML =
@@ -14,7 +14,7 @@ function calcArea() {
     "% over a period of " +
     num3 +
     " years, your total interest is $" +
-    totalInterest +
+    totalInterest.toFixed(2) +
     ", and your grand total is $" +
     Number(parseFloat(num1) + parseFloat(totalInterest)).toFixed(2);
 }
