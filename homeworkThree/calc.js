@@ -16,5 +16,5 @@ function calcArea() {
     " years, your total interest is $" +
     totalInterest.toFixed(2) +
     ", and your grand total is $" +
-    Number(parseFloat(num1) + parseFloat(totalInterest)).toFixed(2);
+    Number(parseFloat(num1) + parseFloat(totalInterest)).toFixed(2) + "!";
 }

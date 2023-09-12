@@ -1,0 +1,16 @@
+h1{
+    font-family: 'Courier New', Courier, monospace;
+    padding: 10px;
+}
+.calculator{
+    /* background-color: antiquewhite; */
+    padding: 20px;
+    margin: 0 auto;
+}
+h2{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 20px;
+}
+p{
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+}
