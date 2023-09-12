@@ -60,4 +60,25 @@ function hello () {
 var misc = "World"
 console.log(hello(misc))
 
+function totalRec (h,w) {
+let perm = recPerm(h,w);
+let area = h*w;
+let recInfo = [perm, area];
+return recInfo
+}
 
+document.getElementById("multiAnswer").innerHTML ="Perminiter: " + totalRec(recHeight, recWidth)[0] + " Feet <br/>Area: " + totalRec(recHeight, recWidth)[1] + " Square Feet.";
+
+function myFunction() {
+  alert ("Who Goes There?")
+}
+
+function wizard (name, job){
+  document.getElementById("future").innerHTML = "Welcome " + name + ", the " + job + "!";
+}
+
+function addItem (){
+  let item = prompt("Add Item: ")
+  console.log(item);
+  alert("You added " + item + ", is this correct?")
+}
