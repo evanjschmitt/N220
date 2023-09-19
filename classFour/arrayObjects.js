@@ -59,3 +59,19 @@ const friend = {
 }
 friend.hometown = "Charlesville"
 document.getElementById("fullName").innerHTML = "My friend's name is " + friend.fullName() + ", and he was born in " + friend.hometown;
+
+
+//Car Object
+const gadget = {
+    year: 2014,
+    make: "Jeep",
+    model: "Compass",
+    Automatic: true,
+    mpg: 25,
+    efficency: function() {
+       return (this.mpg>40);
+    }
+}
+document.getElementById("car").innerHTML = "I own a " + gadget.year + " " + gadget.make + " " + gadget.model + "!";
+
+document.getElementById("gasEff").innerHTML = gadget.make + " " + gadget.model + " Efficency: " + gadget.efficency();
