@@ -80,7 +80,7 @@ function newNum() {
 
 //Dice Roll
 function rollDie() {
-  var dieVal = math.floor(Math.random() * 6) + 1;
+  var dieVal = Math.floor(Math.random() * 6) + 1;
   let dieImage = "";
   switch (dieVal) {
     case 1:
@@ -101,7 +101,60 @@ function rollDie() {
     case 6:
       dieImage = "die_face_6.png";
       break;
-      default:
-        console.log("ERROR: Die Roll was outside of normal range");
+    default:
+      console.log("ERROR: Die Roll was outside of normal range");
+      break;
   }
+  document.getElementById("dice_1").innerHTML =
+    '<img src="/images/' + dieImage + '"/>';
+
+  //For the second die, get rid of the var or let for your variables!!!
+
+  dieVal = Math.floor(Math.random() * 6) + 1;
+  dieImage = "";
+  switch (dieVal) {
+    case 1:
+      dieImage = "die_face_1.png";
+      break; //     <<<<<<<<<<<<<<<<<<<<<< This is SUPER important
+    case 2:
+      dieImage = "die_face_2.jpg";
+      break;
+    case 3:
+      dieImage = "die_face_3.png";
+      break;
+    case 4:
+      dieImage = "die_face_4.png";
+      break;
+    case 5:
+      dieImage = "die_face_5.png";
+      break;
+    case 6:
+      dieImage = "die_face_6.png";
+      break;
+    default:
+      console.log("ERROR: Die Roll was outside of normal range");
+      break;
+  }
+  document.getElementById("dice_2").innerHTML =
+    '<img src="/images/' + dieImage + '"/>';
+}
+
+//Seasons
+//var thisMonth = today.getMonth() + 1; (From Earlier)
+let seasonText = document.getElementById("season");
+switch (true) {
+  case (thisMonth == 12 || thisMonth <= 2):
+    seasonText.innerHTML = "It's Winter!";
+    break;
+  case (thisMonth >= 3 && thisMonth <= 5):
+    seasonText.innerHTML = "It's Spring!";
+    break;
+  case (thisMonth >= 6 && thisMonth <= 8):
+    seasonText.innerHTML = "It's Summer!";
+    break;
+  case (thisMonth >= 9 && thisMonth <= 11):
+    seasonText.innerHTML = "It's Fall!";
+    break;
+  default:
+    seasonText.innerHTML("ERROR: Undefined Month");
 }
