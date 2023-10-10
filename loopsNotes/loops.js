@@ -1,5 +1,88 @@
 //For Loop
 
-for(let i = 0; i<5; i++) {
-    document.getElementById('for').innerHTML+=i + " ";
+for (let i = 0; i < 5; i++) {
+  document.getElementById("for").innerHTML += i + " ";
+}
+
+//While Loop
+let weeks = 5;
+while (weeks > 1) {
+  document.getElementById("while").innerHTML +=
+    "There are " + weeks + " weeks until Thanksgiving break. <br>";
+  weeks--;
+}
+
+//Do While Loop
+
+let candy = 3;
+do {
+  document.getElementById("doWhile").innerHTML +=
+    "I have " + candy + " pieces of candy. <br>";
+  candy--;
+} while (candy > 0);
+
+//Loop Problems
+let month = ["January", "Febuary", "March", "April", "May", "June"];
+let monthList = "";
+for (let m = 0; m < month.length; m++) {
+  monthList += month[m] + "<br>";
+}
+document.getElementById("an1").innerHTML = monthList;
+
+//Problem Two
+let monthTwo = ["January", "Febuary", "March", "April", "May", "June"];
+let monthListTwo = "<ol>";
+for (let m2 = 0; m2 < monthTwo.length; m2++) {
+  monthListTwo += "<li>" + monthTwo[m2] + "</li>";
+}
+monthListTwo += "</ol>";
+document.getElementById("an2").innerHTML = monthListTwo;
+
+//Problem Three
+let pizza = 9;
+while (pizza > 1) {
+  document.getElementById("an3").innerHTML +=
+    "There are " + pizza + " slices of pizza left. <br>";
+  pizza--;
+}
+
+//Problem Four
+let num = 15;
+do {
+  document.getElementById("an4").innerHTML += "Number Count:" + num + "<br>";
+  num++;
+} while (num < 20);
+
+//Problem Five
+let today = new Date();
+let tDate = today.getDate();
+
+for (let d = 50; d >= 5; d -= 5) {
+  document.getElementById("an5").innerHTML += " " + d + " ";
+  if (d == tDate) {
+    document.getElementById("an5").innerHTML +=
+      "<br>" + "That's today's date! <br>";
+    break;
+  }
+}
+
+//Problem Six
+
+//Problem Seven
+
+let tickets = 10;
+let ticketText = "";
+while (tickets > 0) {
+  tickets--;
+  ticketText = "Another seat is gone, only " + tickets + " tickets left <br>";
+
+  if (tickets == 5) {
+    ticketText += "Half the tickets are sold, buy yours now! <br>";
+  }
+  if (tickets == 0) {
+    ticketText = "All the tickets are sold :(";
+    document.getElementById("an7").innerHTML += ticketText;
+    break;
+  }
+  document.getElementById("an7").innerHTML += ticketText;
 }
