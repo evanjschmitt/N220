@@ -86,3 +86,40 @@ while (tickets > 0) {
   }
   document.getElementById("an7").innerHTML += ticketText;
 }
+
+//For In Loop
+const Course = {
+  cNum: "n220",
+  title: "Intro to Javascript",
+  enrolled: 20,
+  prereq: false,
+  offering: ["fall", "spring "],
+};
+
+for (p in Course) {
+  //P = Properties
+  document.getElementById("forIn").innerHTML += p + ": " + Course[p] + "<br>";
+}
+
+for (m in month) {
+  console.log(m + ": " + month[m]); //This is taken from the month problem from earlier
+}
+let holliday = "Halloween";
+for (h in holliday ) {
+  console.log(h + ": " + holliday[h])
+}
+
+// For of Loop
+
+// for (p of Course) {
+//   //P = Properties
+//   document.getElementById("forOf").innerHTML += p + ": " + Course[p] + "<br>";
+// }
+
+for (m of month) {
+  console.log(m); //This is taken from the month problem from earlier
+}
+let hollidayTwo = "Halloween";
+for (h of hollidayTwo ) {
+  console.log(h)
+}
