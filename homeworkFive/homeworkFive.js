@@ -134,6 +134,9 @@ function enterDungeon() {
 }
 
 function startGame() {
+  if (gameText!="") {
+    gameText = ""
+  }
   var user = prompt("Welcome to my adventure game. Please enter your name: ");
   window.confirm("Welcome, " + user + "! Are you ready?");
   gameText +=

@@ -45,18 +45,25 @@ cElement.innerHTML = cText;
 
 //Challenge Four: Adding Items to last list
 
+
+
+//Targeting List Item
+  let allLists = document.getElementsByTagName('ul');
+  let gList = allLists[allLists.length-1];
+//   let gList = document.querySelector('ul:last-child');
+ 
+
 function addItem() {
   let newItem = prompt("New Item: ");
   let newLi = document.createElement("li");
   let newLiText = document.createTextNode(newItem);
   newLi.appendChild(newLiText);
   newLi.style.padding= "10px";
-  newLi.style.listStyle = "none"
-  
-
-  //Targeting List Item
-  let allLists = document.getElementsByTagName('ul');
-  let gList = allLists[allLists.length-1];
-//   let gList = document.querySelector('ul:last-child');
+  newLi.style.listStyle = "none" 
   gList.appendChild(newLi);
+}
+
+function deleteItem() {
+  let lastItem = gList.lastElementChild;
+  gList.removeChild(lastItem)
 }
