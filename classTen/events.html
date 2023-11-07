@@ -4,15 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Events</title>
+
     <style>div {
         border:1px solid black;
-        margin-bottom:25px;
+        margin-bottom:25px; border-radius: 10px;
       }
-      h1 {color:white; margin:0; padding:10px; background-color:crimson;border-bottom:1px solid black;font-size:1.2em;}
-      p, input{margin:10px;}
+      h1 {color:black; margin:0; padding:10px; background-color:lightblue;border-bottom:1px solid black;font-size:1.2em; font-family: Arial, Helvetica, sans-serif; border-radius: 10px;}
+      p, input{margin:10px; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; border-radius: 5px;}
+
+      li{ font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;}
       
+      button, select { margin-left: 10px; margin-bottom: 10px; border-radius: 5px;
+      }
       
       </style>
+
 </head>
 <body>
     <div><h1>Different Event Handlers</h1>
@@ -68,6 +74,18 @@
         <p id="selectText"></p>
       </div>
       
+      <div>
+        <h1>List Example (Completed In Lab)</h1>
+        <ul id="myList">
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+          <li>SASS</li>
+          <li>Double Click to Remove Me!!!!</li>
+        </ul>
+        <button>Add Item</button>
+      </div>
+
      <script src="events.js"></script>
 </body>
 </html>

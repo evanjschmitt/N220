@@ -107,3 +107,37 @@ function choiceSelect() {
 }
 
 dropD.addEventListener("change", choiceSelect);
+
+//Add or Delete List Item
+let addBtn = document.getElementsByTagName("button")[0];
+let itemList = document.getElementById("myList");
+
+function addItem() {
+  let newItem = prompt("Add Item:");
+  let newLi = document.createElement("li");
+  let newLiText = document.createTextNode(newItem);
+  newLi.appendChild(newLiText);
+  itemList.appendChild(newLi);
+}
+
+addBtn.addEventListener("click", addItem);
+
+//Target Event
+
+function getTarget(e) {
+  if (!e) {
+    e = window.event;
+  }
+  return e.target || e.srcElement;
+}
+
+//Remove Target From List
+
+
+function removeItem(e) {
+  let target = getTarget(e);
+  let tParent = target.parentNode;
+  tParent.removeChild(target);
+}
+
+itemList.addEventListener('dblclick', removeItem)
