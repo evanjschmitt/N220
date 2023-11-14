@@ -1,14 +1,18 @@
 //Add Trash Can
-var listItems = document.querySelectorAll("codeList li");
+var i = 0;
+var listItems = document.querySelectorAll("#codeBox li");
 var totalItems = listItems.length;
-let i = 0;
-for (i; totalItems > i; i++) {
-  var image = document.createElement("img");
+var image = document.createElement("img");
+console.log(totalItems)
+for (i; totalItems > i; i++) 
+{console.log("hello");
+  
+
   image.setAttribute(
-    'src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/27019/trashcanIcon.png"'
+    "src",
+    "https://s3-us-west-2.amazonaws.com/s.cdpn.io/27019/trashcanIcon.png"
   );
-  image.classList.add("listIcon");
+  image.setAttribute("class", "listIcon");
   listItems[i].appendChild(image);
   console.log(image);
-  console.log("hello");
 }
