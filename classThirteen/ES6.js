@@ -47,7 +47,7 @@ document.getElementById("s3").innerHTML +=
 document.getElementById("s3").innerHTML += `<p>${firstName} ${lastName}</p>`;
 //The bottom way may seem longer, but it is easier to write than the above method.
 
-//Arrow Functions
+//Normal Functions
 function fullname(f, l) {
   return `${f} ${l}`;
 }
