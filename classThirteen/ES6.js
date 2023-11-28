@@ -99,5 +99,14 @@ document.getElementById(
 //Spread and Rest Section was SKIPPED in class
 
 //Array Destructuring
-const course = ['n220', 'Intro to JS'];
-let [courseNum, courseTitle] =course;
+const course = ["N220", "Intro to JS"];
+let [courseNum, courseTitle] = course;
+
+document.getElementById(
+  "s7_array"
+).innerHTML = `<p>${courseNum}: ${courseTitle}</p>`;
+
+//Object Destructuring
+
+let [title, surName] = ["Mr.", "John", "Phillips", "Sr."];
+document.getElementById("s7_array").innerHTML += `<p>${title} ${surName}</p>`;
