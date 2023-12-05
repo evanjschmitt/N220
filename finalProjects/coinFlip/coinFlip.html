@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coin Flipper</title>
+</head>
+<style>
+    h1 {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        color: black;
+    }
+
+    table {
+        background-color: antiquewhite;
+        border: 2px solid;
+        min-width: 125px;
+        border-collapse: collapse;
+        font-family: Arial, Helvetica, sans-serif
+    }
+
+    th {
+        border-bottom: 1px solid;
+    }
+
+    .topRow {
+        background-color: darkgreen;
+        color: white;
+        padding: 20px;
+    }
+
+    button {
+        margin-bottom: 10px;
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: lightgreen;
+
+    }
+
+    img {
+        max-width: 25px;
+        margin-left: -10px;
+        margin-bottom: -2px;
+    }
+
+    p {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+    }
+    .results{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        
+    }
+    .imageHalf{
+        min-width: 300px;
+    }
+    .imageHalf img{
+        min-width: 300px;
+    }
+</style>
+
+<body>
+    <h1>C<span> <img src="images/coin.png" alt="A Coin Image"></span>in Flipper</h1>
+    <button onclick="flipCoin()">Flip the coin!</button>
+    <div class="results">
+        <div class="tableHalf">
+            <table>
+                <tbody id="table">
+                    <tr class="topRow">
+                        <th>Flips</th>
+                        <th>Result</th>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="imageHalf">
+            <img id="largeImg" alt="">
+        </div>
+
+    </div>
+    <p id="ratio"></p>
+</body>
+<script src="coinFlip.js"></script>
+
+</html>
