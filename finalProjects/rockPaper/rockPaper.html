@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors Game</title>
+</head>
+<style>
+    h1 {
+        font-family: Georgia;
+        color: black;
+    }
+    h3 {
+        font-family: Arial, Helvetica, sans-serif;
+        margin-top: -10px;
+        font-size: 20px;
+    }
+
+    table {
+        background-color: white;
+        border: 2px solid;
+        min-width: 150px;
+        border-collapse: collapse;
+        font-family: Arial, Helvetica, sans-serif
+    }
+
+    th {
+        border-bottom: 1px solid;
+        padding: 10px;
+    }
+
+    .topRow {
+        background-color: lightblue;
+        color: black;
+        padding: 20px;
+    }
+
+    button {
+        margin-bottom: 10px;
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: lightblue;
+
+    }
+
+    img {
+        max-width: 25px;
+        margin-left: -10px;
+        margin-bottom: -2px;
+    }
+
+    p {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+    }
+
+    .results {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        
+
+    }
+.tableHalf{
+    margin-left: -200px;
+}
+    .imageHalf {
+        min-width: 300px;
+        margin-left: -400px;
+    }
+
+    .imageHalf img {
+        min-width: 300px;
+        margin: 10px;
+    }
+.bottomText{
+    margin-left: 20px;
+}
+</style>
+
+<body>
+    <h1>Rock Paper Scissors Game</h1>
+    <h3>Please Note: Images may take a few seconds to appear</h3>
+    <button onclick="playGame()">Let's Play!</button>
+    
+    <div class="results">
+        <div class="tableHalf">
+            <table>
+                <tbody id="table">
+                    <tr class="topRow">
+                        <th>Game</th>
+                        <th>Winner</th>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="imageHalf">
+            <img id="p1" alt="">
+            <img id="p2" alt="">
+        </div>
+
+    </div>
+    <p class="bottomText" id="text"></p>
+</body>
+<script src="rockPaper.js"></script>
+
+</html>
