@@ -82,10 +82,12 @@ function validateForm() {
   }
   // Validate Experation Date
   let expDate = document.getElementById("expDate").value;
-  let validExp = /^[0-1]+[0-9]+\/+[0-9]{4}/;
+  let validExp = /^(0[1-9]|1[0-2])+\/(202[3-9])/;
   if (!validExp.test(expDate)) {
     validForm = false;
     document.getElementById("expError").innerText = "Please use mm/yyyy format";
+  } else {
+    document.getElementById("expError").innerText = ""
   }
 
   //Check For Remaining Values
@@ -105,12 +107,11 @@ function validateForm() {
   }
 }
 
-document.getElementsByTagName("form")[0].addEventListener(
-  "submit",
-  function (event) {
+document
+  .getElementsByTagName("form")[0]
+  .addEventListener("submit", function (event) {
     //Stop Form Default
     event.preventDefault();
     //Validation
     validateForm();
-  },
-);
+  });

@@ -44,6 +44,13 @@
             font-family: Georgia, 'Times New Roman', Times, serif;
             font-size: 20px;
         }
+        
+        .experationNote {
+            color: black;
+            font-weight: bold;
+            margin-top: 10px;
+            padding: 10px;
+        }
     </style>
 </head>
 
@@ -107,12 +114,13 @@
         <label>Card Number:</label>
         <input type="text" name="cardNum" id="cardNum" placeholder="1234-1234-1234-1234"/>
         <p class="errorText" id="cardError"></p><br />
-        <label>Experation Date:</label>
+        <label>Experation Date*:</label>
         <input type="text" name="expDate" id="expDate" placeholder="mm/yyyy"/>
         <p class="errorText" id="expError"></p><br />
 
 
         <input type="submit" value="Submit Form" id="submitBtn" />
+        <p class="experationNote">*Cards will only be accepted for years between 2023 and 2029 as a security measure.</p>
     </form>
 
     <script src="forms.js"></script>
