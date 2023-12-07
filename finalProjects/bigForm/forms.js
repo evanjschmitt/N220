@@ -1,6 +1,8 @@
 function validateForm() {
   let validForm = true;
   document.getElementsByClassName("errorText").innerText = "";
+  document.getElementById('formSubmitted').innerHTML =  ``
+
   //Validate Email
   let emailVal = document.getElementById("myEmail").value;
   let validEmail = /^([a-zA-Z0-9!#$%.]+)@([a-zA-Z0-9-]+).([A-Za-z]{2,3})$/;
@@ -10,8 +12,8 @@ function validateForm() {
     validForm = false;
   } else {
     document.getElementById("emailError").innerText = "";
+    document.getElementById('formSubmitted').innerHTML = ""
   }
-
   //Validate Password
   let passwordVal = document.getElementById("password").value;
   let passwordConfirm = document.getElementById("passwordCon").value;
@@ -104,6 +106,9 @@ function validateForm() {
   ) {
     validForm = false;
     console.log("Name, Address, or City value empty");
+  }
+  if (validForm) {
+    document.getElementById('formSubmitted').innerHTML =  `Welcome, ${firstNameVal}! You're all set!`
   }
 }
 
