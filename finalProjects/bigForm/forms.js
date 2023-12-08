@@ -1,7 +1,7 @@
 function validateForm() {
   let validForm = true;
   document.getElementsByClassName("errorText").innerText = "";
-  document.getElementById('formSubmitted').innerHTML =  ``
+  document.getElementById("formSubmitted").innerHTML = ``;
 
   //Validate Email
   let emailVal = document.getElementById("myEmail").value;
@@ -12,7 +12,7 @@ function validateForm() {
     validForm = false;
   } else {
     document.getElementById("emailError").innerText = "";
-    document.getElementById('formSubmitted').innerHTML = ""
+    document.getElementById("formSubmitted").innerHTML = "";
   }
   //Validate Password
   let passwordVal = document.getElementById("password").value;
@@ -73,14 +73,19 @@ function validateForm() {
     validForm = false;
     document.getElementById("cardTypeError").innerText =
       "Please select a card type";
+  } else {
+    document.getElementById("cardTypeError").innerText = "";
   }
   //Validate Card Number
   let cardNum = document.getElementById("cardNum").value;
-  let validCard = /^([0-9]{4})+[-](\d{4})+[-](\d{4})+[-](\d{4})$/;
+  let validCard = /^([0-9]{4})+[-]([0-9]{4})+[-]([0-9]{4})+[-]([0-9]{4})$/;
   if (!validCard.test(cardNum)) {
     validForm = false;
     document.getElementById("cardError").innerText =
-      "Please use the following format: XXXX-XXXX-XXXX";
+      "Please use the following format: XXXX-XXXX-XXXX-XXXX";
+  } else {
+    document.getElementById("cardError").innerText =
+      "";
   }
   // Validate Experation Date
   let expDate = document.getElementById("expDate").value;
@@ -89,7 +94,7 @@ function validateForm() {
     validForm = false;
     document.getElementById("expError").innerText = "Please use mm/yyyy format";
   } else {
-    document.getElementById("expError").innerText = ""
+    document.getElementById("expError").innerText = "";
   }
 
   //Check For Remaining Values
@@ -108,7 +113,9 @@ function validateForm() {
     console.log("Name, Address, or City value empty");
   }
   if (validForm) {
-    document.getElementById('formSubmitted').innerHTML =  `Welcome, ${firstNameVal}! You're all set!`
+    document.getElementById(
+      "formSubmitted"
+    ).innerHTML = `Welcome, ${firstNameVal}! You're all set!`;
   }
 }
 
